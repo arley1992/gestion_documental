@@ -18,6 +18,11 @@ Route::middleware('auth')->get('/clientes', [ClientesController::class,'index'] 
 
 // modulo departamento
 Route::middleware('auth')->get('/departamento', [DepartamentoController::class,'index'])->name('departamento.index');
+Route::middleware('auth')->get('/departamento/create', [DepartamentoController::class,'create'])->name('departamento.create');
+Route::middleware('auth')->post('/departamento', [DepartamentoController::class,'store'])->name('departamento.store');
+Route::middleware('auth')->get('/departamento/{dep}/edit', [DepartamentoController::class,'edit'])->name('departamento.edit');
+Route::middleware('auth')->get('/departamento/{id}/delete', [DepartamentoController::class,'delete'])->name('departamento.delete');
+Route::middleware('auth')->patch('/departamento/{dep}', [DepartamentoController::class,'update'])->name('departamento.update');
 
 // modulo de documento
 Route::middleware('auth')->get('/documento', [DocumentoController::class,'index'])->name('documento.index');
