@@ -6,7 +6,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="fl"><i class="fa-solid fa-network-wired"></i></i> Listados de departamento</h3>
+                        <h3 class="fl"><i class="fa-solid fa-network-wired"></i> Listados de departamento</h3>
                         <button type="button" class="btn btn-primary fr">
                             <i class="fa-solid fa-plus"></i> Nuevo
                         </button>
@@ -27,8 +27,6 @@
                                         <div class="fr">Acciones</div>
                                     </th>
                                 </tr>
-
-                                
                             </thead>
                             <tbody>
                                 @foreach ($dep as $item)
@@ -48,4 +46,9 @@
                                 @endforeach
                             </tbody>
                         </table>
-                    @endsection
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
