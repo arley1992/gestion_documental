@@ -12,4 +12,9 @@ class EmpleadosController extends Controller
         $empleados = Empleado::all();
         return view('templates/empleados/index', compact('empleados'));
     }
+
+    public function create()
+    {
+        
+    }
 }

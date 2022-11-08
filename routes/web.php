@@ -15,7 +15,11 @@ Route::middleware('auth')->get('/empleados',[EmpleadosController::class,'index']
 
 // modulo clientes
 Route::middleware('auth')->get('/clientes', [ClientesController::class,'index'] )->name('clientes.index');
-
+Route::middleware('auth')->get('/clientes/create', [ClientesController::class,'create'] )->name('clientes.create');
+Route::middleware('auth')->post('/clientes', [ClientesController::class,'store'])->name('clientes.store');
+Route::middleware('auth')->get('/clientes/{cli}/edit', [ClientesController::class,'edit'])->name('clientes.edit');
+Route::middleware('auth')->get('/clientes/{id}/delete', [ClientesController::class,'delete'])->name('clientes.delete');
+Route::middleware('auth')->patch('/clientes/{cli}', [ClientesController::class,'update'])->name('clientes.update');
 // modulo departamento
 Route::middleware('auth')->get('/departamento', [DepartamentoController::class,'index'])->name('departamento.index');
 Route::middleware('auth')->get('/departamento/create', [DepartamentoController::class,'create'])->name('departamento.create');
