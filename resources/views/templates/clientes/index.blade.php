@@ -6,7 +6,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="fl"><i class="fa-solid fa-people-group"></i></i> Listados de clientes</h3>
+                        <h3 class="fl"><i class="fa-solid fa-people-group"></i></i> Listado de clientes</h3>
                         <a type="button" href="{{route('clientes.create')}}" class="btn btn-primary fr">
                             <i class="fa-solid fa-plus"></i> Nuevo
                         </a>

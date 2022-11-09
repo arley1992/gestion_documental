@@ -12,7 +12,7 @@
                         </button>
                     </div>
 
-                    <div class="card-body">
+                    <div class="card-body table-responsive">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
                                 {{ session('status') }}

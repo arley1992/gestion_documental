@@ -12,6 +12,11 @@ Route::get('/', function () {
 });
 // modulo empleados 
 Route::middleware('auth')->get('/empleados',[EmpleadosController::class,'index'])->name('empleados.index');
+Route::middleware('auth')->get('/empleados/create',[EmpleadosController::class,'create'])->name('empleados.create');
+Route::middleware('auth')->post('/empleados',[EmpleadosController::class,'store'])->name('empleados.store');
+Route::middleware('auth')->get('/empleados{emp}/edit',[EmpleadosController::class,'edit'])->name('empleados.edit');
+Route::middleware('auth')->get('/empleados{id}/delete',[EmpleadosController::class,'delete'])->name('empleados.delete');
+Route::middleware('auth')->patch('/empleados{emp}',[EmpleadosController::class,'update'])->name('empleados.update');
 
 // modulo clientes
 Route::middleware('auth')->get('/clientes', [ClientesController::class,'index'] )->name('clientes.index');
