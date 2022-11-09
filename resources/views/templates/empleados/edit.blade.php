@@ -16,7 +16,7 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-                        <form class="needs-validation" novalidate method="POST" action="{{ route('Empleados.update',$emp) }}">
+                        <form class="needs-validation" novalidate method="POST" action="{{ route('empleados.update',$emp) }}">
                             {{-- csrf etiqueta de blade que agrega un token oculto en el formulario para evitar falsificacion 
                                 de peticion  --}}
                             @csrf @method('PATCH')
@@ -62,7 +62,7 @@
                             </div>
 
                             <button type="submit" class="btn btn-warning"> Actualizar </button>
-                            <a type="button" href="{{ route('Empleados.index') }}" class="btn btn-secondary"> Cancelar
+                            <a type="button" href="{{ route('empleados.index') }}" class="btn btn-secondary"> Cancelar
                             </a>
                         </form>
                         
