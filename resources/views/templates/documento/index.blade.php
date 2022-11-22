@@ -9,7 +9,7 @@
                         <h3 class="fl"><i class="fa-solid fa-user-tie"></i></i> Listados de documentos</h3>
                         <a href="{{ route('documento.create') }}" type="button" class="btn btn-primary fr">
                             <i class="fa-solid fa-plus"></i> Nuevo
-                     </a>
+                        </a>
                     </div>
 
                     <div class="card-body table-responsive">
@@ -49,8 +49,9 @@
                                         <td>{{ $item->remitente }}</td>
                                         <td>
                                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                                <button type="button" class="btn btn-warning btn-sm"><i
-                                                        class="fa-solid fa-pen-to-square"></i> Editar</button>
+                                                <a href="{{ route('documento.edit', $item) }}" type="button"
+                                                    class="btn btn-warning btn-sm"><i class="fa-solid fa-pen-to-square"></i>
+                                                    Editar</a>
                                                 <button type="button" class="btn btn-danger btn-sm"><i
                                                         class="fa-solid fa-trash-can"></i> Eliminar</button>
                                             </div>
@@ -59,7 +60,6 @@
                                     </tr>
                                 @endforeach
                             </tbody>
-                        </table>
                     </div>
                 </div>
             </div>

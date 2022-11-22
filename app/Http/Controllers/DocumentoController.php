@@ -60,7 +60,7 @@ class DocumentoController extends Controller
         
         $tipos = TipoDocumentos::all();
         $clientes = Clientes::all();
-        $docartamentos = Departamento::all();
+        $departamentos = Departamento::all();
         return view("templates.documento.edit", compact("doc","tipos","clientes","departamentos"));
     }
 
