@@ -34,9 +34,11 @@ Route::middleware('auth')->get('/departamento/{id}/delete', [DepartamentoControl
 Route::middleware('auth')->patch('/departamento/{dep}', [DepartamentoController::class,'update'])->name('departamento.update');
 
 // modulo de documento
-Route::middleware('auth')->get('/documento', [DocumentoController::class,'index'])->name('documento.index');
-Route::middleware('auth')->get('/documento/registrar', [DocumentoController::class,'create'])->name('documento.create');
-
+Route::middleware('auth')->get('/documento', [DocumentoController::class, 'index'])->name('documento.index');
+Route::middleware('auth')->get('/documento/registrar', [DocumentoController::class, 'create'])->name('documento.create');
+Route::middleware('auth')->post('/documento/store', [DocumentoController::class, 'store'])->name('documento.store');
+Route::middleware('auth')->get('/documento/{doc}/edit', [DocumentoController::class, 'edit'])->name('documento.edit');
+Route::middleware('auth')->patch('/documento/{doc}/update', [DocumentoController::class, 'update'])->name('documento.update');
 // modulo tipo documento
 Route::middleware('auth')->get('/tipo_documento', [TipoDocumentoController::class,'index'])->name('tipoDocumento.index');
 
